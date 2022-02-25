@@ -22,7 +22,6 @@ import java.util.Collection;
 @RequestMapping("/servlet/v2")
 public class ServletUploadControllerV2 {
 
-
     @Value("${file.dir}") // application.properties의 "file.dir의 경로를 가져옴
     public String fileDir;
 
@@ -60,7 +59,6 @@ public class ServletUploadControllerV2 {
          */
         for (Part part : parts) {
 
-
             log.info("===== PART =====");
             log.info("name={}", part.getName());
             Collection<String> headerNames = part.getHeaderNames();
@@ -86,8 +84,6 @@ public class ServletUploadControllerV2 {
             }
         }
 
-
         return "upload-form";
-
     }
 }
